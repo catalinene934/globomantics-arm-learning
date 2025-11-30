@@ -37,5 +37,5 @@ jobs:
           parameters: 
             ./arm-templates/storageaccount.parameters.json
             storageAccountName=globostg0432catene2
-            location=Australia East
+            location="Australia East"
           deploymentMode: Incremental
