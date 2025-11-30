@@ -33,7 +33,7 @@
             "tags": {
                 "displayName": "[parameters('storageAccountName')]"
             },
-            "kind": "storageV2",
+            "kind": "Storage",
             "sku": {
                 "name": "[parameters('sku')]"
             },
