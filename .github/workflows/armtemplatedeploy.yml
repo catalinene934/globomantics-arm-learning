@@ -22,8 +22,5 @@ jobs:
         uses: Azure/cli@v2.2.0
         with:
           inlineScript: |
-            az group create \
-              --name rg-GithubActions \
-              --location "Australia East"
-
+           az deployment sub create --location "Australia East" --template-file ./arm-templates/resourcegroup.json
  
