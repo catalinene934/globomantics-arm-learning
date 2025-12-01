@@ -8,7 +8,7 @@ on:
 
 env:
   resource_group_name: rg-githubactions
-  location: "Australia East"
+  location: "australiaeast"
   subscriptionId: d64eef0e-d7f1-4c6c-bf8a-9989e7483dd7    
 
 jobs:
