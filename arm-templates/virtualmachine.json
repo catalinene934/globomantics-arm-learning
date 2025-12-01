@@ -8,6 +8,12 @@
            "metadata": {
                 "description": "Enter the admin password for the Virtual Machine."
             }
+        },
+        "location": {
+           "type": "string",
+           "metadata": {
+                "description": "enter the location to deploy the resources to"
+            }
         }
     },
     "variables": {},
@@ -17,7 +23,7 @@
         "name": "ubuntuVM1-VirtualNetwork",
         "type": "Microsoft.Network/virtualNetworks",
         "apiVersion": "2018-08-01",
-        "location": "[resourceGroup().location]",
+        "location": "[parameters('location')]",
         "tags": {
             "displayName": "ubuntuVM1-VirtualNetwork"
         },
@@ -41,7 +47,7 @@
         "name": "ubuntuVM1-NetworkInterface",
         "type": "Microsoft.Network/networkInterfaces",
         "apiVersion": "2018-08-01",
-        "location": "[resourceGroup().location]",
+        "location": "[parameters('location')]",
         "dependsOn": [
             "[resourceId('Microsoft.Network/virtualNetworks', 'ubuntuVM1-VirtualNetwork')]"
         ],
@@ -66,7 +72,7 @@
         "name": "ubuntuVM1",
         "type": "Microsoft.Compute/virtualMachines",
         "apiVersion": "2017-03-30",
-        "location": "[resourceGroup().location]",
+        "location": "[parameters('location')]",
         "dependsOn": [
           
             "[resourceId('Microsoft.Network/networkInterfaces', 'ubuntuVM1-NetworkInterface')]"
