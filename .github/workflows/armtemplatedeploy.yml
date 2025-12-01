@@ -35,7 +35,7 @@ jobs:
             location=${{ env.location }}
           deploymentName: ${{ env.resource_group_name}}
  
-      - name: Deploy Storage account stgithubactions
+      - name: Deploy Storage accountt stgithubactions
         uses: Azure/arm-deploy@v2
         id: storageAccountDeploy
         with:
